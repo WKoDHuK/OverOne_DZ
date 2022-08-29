@@ -1,0 +1,7 @@
+name = input("Введите ваше имя")
+surname = input("ВВедите вашу фамилию")
+patronymic = input("Введите отчество")
+Age = input("Введите возраст")
+City = input("Ваш город")
+print(name,surname,patronymic)
+print(Age,City)
