@@ -57,10 +57,10 @@
 
 # *args(обычный аргумент, преобраз в кортежи) **kwargs(множественный аргумент, преобраз в словари)
 #
-# def many(*args, **kwargs):
-#      print(args, kwargs)
-#      print(kwargs)
-# many(1,2,3, name='Mike', job='programmer')
+def many(*args, **kwargs):
+     print(args, kwargs)
+     #print(kwargs)
+many(1,2,3, name='Mike', job='programmer')
 
 ######################################################################################
 
