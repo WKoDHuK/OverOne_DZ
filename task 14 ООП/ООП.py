@@ -75,12 +75,34 @@
 #############################################################################
 
 #уровни доступа к атрибутам
+#
+# class H:
+#     def __init__(self):
+#         self.__money == 100
+#     def print_money(self):
+#         return self.__money
+# h = H()
+# h.__money
 
-class H:
+#########################################################################
+
+# наследование
+# родительский класс
+class Phone:
+    # инициализатор
     def __init__(self):
-        self.__money == 100
-    def print_money(self):
-        return self.__money
-h = H()
-h.__money
+        self.is_on = False
+    # включаем телефон
+    def turn_of(self):
+        self.is_on = True
+    # если телефон включен, делаем звонок
+    def call(self):
+        if self.is_on:
+            print('Making call....')
+# унаследованный класс
+class MobilePhone(Phone):
+    # добавляем нвовое свойство батареи
+
+
+
 

@@ -60,46 +60,60 @@
 
 #######################################################################
 
-class Human:
-    #статические поля
-    default_name = 'No name'
-    default_age = 0
-
-    def __init__(self, name=default_name, age=default_age):
-        # динамические поля
-        # публичные
-        self.name = name
-        self.age = age
-        # приватные
-        self.__money = 1000
-        self.__house = 'Дом'
-    # справочный метод
-    def info(self):
-        print(f'Name:{self.name}')
-        print(f'Age:{self.age}')
-        print(f'Money:{self.__money}')
-        print(f'House:{self.__house}')
-    # статический справочный метод
-    @staticmethod
-    def default_info():
-        print(f'Default Name:{Human.default_name}')
-        print(f'Default Age:{Human.default_age}')
-    def earn_money(self, amount):
-        self.__money += amount
-        # прибаленна сумма денег. и итоговое значение составляет:
-        print(f'Earned:{amount} money! Current value: {self.__money}')
-# вызов статического метода, не требует создание экземпляра
-Human.default_info()
-# создание обьекта Human
-Alexander = Human('Sasha', 18)
-Alexander.info()
-
-Alexander.earn_money(5000)
-Alexander.earn_money(20000)
-Alexander.info()
+# class Human:
+#     #статические поля
+#     default_name = 'No name'
+#     default_age = 0
+#
+#     def __init__(self, name=default_name, age=default_age):
+#         # динамические поля
+#         # публичные
+#         self.name = name
+#         self.age = age
+#         # приватные
+#         self.__money = 1000
+#         self.__house = 'Дом'
+#     # справочный метод
+#     def info(self):
+#         print(f'Name:{self.name}')
+#         print(f'Age:{self.age}')
+#         print(f'Money:{self.__money}')
+#         print(f'House:{self.__house}')
+#     # статический справочный метод
+#     @staticmethod
+#     def default_info():
+#         print(f'Default Name:{Human.default_name}')
+#         print(f'Default Age:{Human.default_age}')
+#     def earn_money(self, amount):
+#         self.__money += amount
+#         # прибаленна сумма денег. и итоговое значение составляет:
+#         print(f'Earned:{amount} money! Current value: {self.__money}')
+# # вызов статического метода, не требует создание экземпляра
+# Human.default_info()
+# # создание обьекта Human
+# Alexander = Human('Sasha', 18)
+# Alexander.info()
+#
+# Alexander.earn_money(5000)
+# Alexander.earn_money(20000)
+# Alexander.info()
 
 ###############################################################################
 
+class Calculator:
+    def valdate_numbers(self, first_number, second_number):
+        is_valid_first_number = isinstance(first_number, int) or isinstance(first_number, float)
+        is_valid_second_number = isinstance(second_number, int) or isinstance(second_number, float)
+        if is_valid_first_number and is_valid_second_number:
+            print("Valid")
+        else:
+            raise Exception("Not Valid")
 
+my_calc = Calculator()
+# my_calc.summ(1,2)
+# my_calc.difference(1,2)
+# my_calc.multiplication(1,2)
+# my_calc.division(1,0)
+my_calc.valdate_numbers(1,2)
 
 
